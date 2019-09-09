@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "Server",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tsc --p tsconfig.test.json && node build/test/main.js",
+    "build": "tsc",
+    "start": "node build/main/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://mrlee23@gitlab.com/educastle/server/server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-typescript": "^4.0.1",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
