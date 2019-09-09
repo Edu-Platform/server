@@ -111,3 +111,6 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 *.lnk
+
+# Project
+build/
