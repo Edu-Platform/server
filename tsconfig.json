@@ -2,12 +2,12 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "commonjs",
-    "rootDir": "test",
-    "outDir": "build/test",
+    "rootDir": "src",
+    "outDir": "build/main",
     "sourceMap": false,
     "declaration": false,
     "noImplicitUseStrict": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "strictBindCallApply": true,
@@ -16,10 +16,10 @@
       "es2017",
       "dom"
     ],
-    "allowJs": false,
-    "typeRoots": ["node_modules/@types", "src/types"]
+    "allowJs": true,
+    "typeRoots": ["node_modules/@types", "src/types/"]
   },
   "compileOnSave": false,
-  "include": ["./test"],
+  "include": ["src/**/*"],
   "exclude": ["**/node_modules", "**/*.spec.ts"]
 }

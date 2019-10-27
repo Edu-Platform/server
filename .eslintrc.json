@@ -1,14 +1,15 @@
 {
   "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "project": "./tsconfig.json",
-    "tsconfigRootDir": "."
-  },
   "plugins": ["@typescript-eslint"],
-  "extends": ["airbnb"],
+  "extends": ["airbnb/base", "plugin:import/typescript"],
   "rules": {
+    "import/no-unresolved": "off",
     "import/named": "off",
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "no-plusplus": "off",
+    "no-octal": "off",
     "@typescript-eslint/prefer-interface": "off",
-    "@typescript-eslint/explicit-ufnction-return-type": "off"
+    "@typescript-eslint/explicit-function-return-type": "off"
   }
 }
