@@ -1,5 +1,6 @@
 export interface Category {
   id: number;
+  type: number;
   parentId?: number;
   name: string;
 }
@@ -8,7 +9,7 @@ export interface Academy {
   id: number;
   name: string;
   address?: string;
-  category: number[];
+  categoryIds: number[];
   star: number;
   commentIds: number[];
 }
