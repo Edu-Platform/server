@@ -11,9 +11,10 @@
     "build": "tsc",
     "start": "node build/main/main.js",
     "dev": "ts-node-dev src/main.ts",
-    "startdb": "(docker rm -fv educastleDB || true) && docker run --name=educastleDB -d --rm -v $(pwd)/db_scheme/main.sql:/docker-entrypoint-initdb.d/01_main.sql:ro -e MYSQL_ROOT_PASSWORD=Y0ungAndR1chThatsUs -e MYSQL_DATABASES=main -p 3306:3306 mysql:5.7.28 mysqld --innodb_print_all_deadlocks=ON",
-    "stopdb": "docker rm -fv educastleDB",
-    "execdb": "docker exec -it educastleDB /bin/bash"
+    "db": "(npm run db-stop || true) && docker run --name=educastleDB -d --rm -v $(pwd)/db_scheme/main.sql:/docker-entrypoint-initdb.d/01_main.sql:ro -v $(pwd)/db_scheme/db_initial_setting.sql:/docker-entrypoint-initdb.d/90_db_initial_setting.sql:ro -e MYSQL_ROOT_PASSWORD=Y0ungAndR1chThatsUs -e MYSQL_DATABASES=main -p 3306:3306 mysql:5.7.28 mysqld --innodb_print_all_deadlocks=ON && npm run db-log",
+    "db-stop": "docker rm -fv educastleDB",
+    "db-exec": "docker exec -it educastleDB /bin/bash",
+    "db-log": "docker logs -f educastleDB"
   },
   "repository": {
     "type": "git",
