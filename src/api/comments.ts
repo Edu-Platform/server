@@ -1,7 +1,7 @@
-import * as scheme from '../types/scheme';
+import * as apiScheme from '../types/api_scheme';
 import * as db from '../db/comments';
 
-export async function get(req: scheme.CommentsGetRequest) : Promise<scheme.CommentsGetResponse> {
+export async function get(req: apiScheme.CommentsGetRequest) : Promise<apiScheme.CommentsGetResponse> {
   if (req.id == null) {
     throw new Error('Id not exists');
   }
@@ -9,7 +9,7 @@ export async function get(req: scheme.CommentsGetRequest) : Promise<scheme.Comme
   return result;
 }
 
-export async function getAll() : Promise<scheme.CommentsGetResponse[]> {
+export async function getAll() : Promise<apiScheme.CommentsGetResponse[]> {
   const result = await db.getAll();
   return result;
 }
