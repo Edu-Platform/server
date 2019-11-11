@@ -1,11 +1,11 @@
-CREATE SCHEMA IF NOT EXISTS `main` ;
-USE `main` ;
+CREATE SCHEMA IF NOT EXISTS `main` DEFAULT CHARACTER SET utf8;
+USE `main`;
 
 CREATE TABLE IF NOT EXISTS `main`.`academy` (
   `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
   `address` VARCHAR(500) NOT NULL,
-  `categoryIds` JSON NOT NULL,
+  `category_id_list` JSON NOT NULL,
   `star` BIGINT UNSIGNED NOT NULL,
   `commentIds` JSON NOT NULL,
   PRIMARY KEY (`id`))
@@ -13,7 +13,7 @@ ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `main`.`category` (
   `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `parentId` BIGINT UNSIGNED NOT NULL,
+  `parent_id` BIGINT UNSIGNED NOT NULL,
   `name` VARCHAR(100) NOT NULL,
   `type` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`))
@@ -24,16 +24,16 @@ CREATE TABLE IF NOT EXISTS `main`.`class` (
   `name` VARCHAR(100) NOT NULL,
   `description` TEXT NOT NULL,
   `images` JSON NOT NULL,
-  `tutorIds` JSON NOT NULL,
-  `lessonIds` JSON NOT NULL,
+  `tutor_id_list` JSON NOT NULL,
+  `lesson_id_list` JSON NOT NULL,
   `star` BIGINT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `main`.`comments` (
   `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `userId` BIGINT UNSIGNED NOT NULL,
-  `parentId` BIGINT UNSIGNED NOT NULL,
+  `user_id` BIGINT UNSIGNED NOT NULL,
+  `parent_id` BIGINT UNSIGNED NOT NULL,
   `content` TEXT NOT NULL,
   `timestamp` BIGINT UNSIGNED NOT NULL,
   `likes` BIGINT UNSIGNED NOT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `main`.`lesson` (
   `name` VARCHAR(100) NOT NULL,
   `description` TEXT NOT NULL,
   `images` JSON NOT NULL,
-  `commentIds` JSON NOT NULL,
+  `comment_id_list` JSON NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
