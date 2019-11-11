@@ -10,7 +10,10 @@
     "test": "tsc --p tsconfig.test.json && mocha build/test/test/test.js --reporter dot",
     "build": "tsc",
     "start": "node build/main/main.js",
-    "dev": "ts-node-dev src/main.ts"
+    "dev": "ts-node-dev src/main.ts",
+    "startdb": "(docker rm -fv educastleDB || true) && docker run --name=educastleDB -d --rm -v $(pwd)/db_scheme/main.sql:/docker-entrypoint-initdb.d/01_main.sql:ro -e MYSQL_ROOT_PASSWORD=Y0ungAndR1chThatsUs -e MYSQL_DATABASES=main -p 3306:3306 mysql:5.7.28 mysqld --innodb_print_all_deadlocks=ON",
+    "stopdb": "docker rm -fv educastleDB",
+    "execdb": "docker exec -it educastleDB /bin/bash"
   },
   "repository": {
     "type": "git",
