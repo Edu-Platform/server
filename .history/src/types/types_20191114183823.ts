@@ -17,7 +17,6 @@ export const VENDOR_TYPE = {
 
 export const CATEGORY_TYPE = {
   AREA: 1,
-  SECTION: 2,
 };
 
 export const ROLE_TYPE = {

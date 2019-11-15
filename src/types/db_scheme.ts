@@ -16,3 +16,10 @@ export interface CommentsScheme {
   likes: number;
   dislikes: number;
 }
+
+export interface CategoriesScheme {
+  id: number;
+  type: number;
+  parent_id: number;
+  name: string;
+}

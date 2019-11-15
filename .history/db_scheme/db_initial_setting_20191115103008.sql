@@ -25,26 +25,14 @@ INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (16, 4,
 INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (17, 4, '오금동', 1);
 INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (18, 4, '가락동', 1);
 -- 분야 단위
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (101, 0, '인기', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (102, 0, '입시', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (103, 0, '외국어', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (104, 0, '음악', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (105, 0, 'Art', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (106, 0, '액티비티', 2);
--- 과목 단위 : 입시 분야
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (111, 102, '언어영역', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (112, 102, '수리영역', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (113, 102, '과탐·사탐', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (114, 102, '논술', 2);
--- 과목 단위 : 외국어 분야
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (115, 103, '토익', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (116, 103, '영어스피킹', 2);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (117, 103, '중국어', 2);
--- 연령 단위
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (201, 0, '유아', 3);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (202, 0, '중·고등부', 3);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (203, 0, '대학생', 3);
-INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (204, 0, '직장인', 3);
+INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (1000, 0, '인기', 2);
+INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (1001, 0, '입시', 2);
+INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (1003, 0, '외국어', 2);
+INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (1004, 0, '음악', 2);
+INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (1005, 0, 'Art', 2);
+INSERT INTO `main`.`category` (`id`, `parent_id`, `name`, `type`) VALUES (1006, 0, '액티비티', 2);
+
+-- 과목 단위
 
 
 -- Comments 초기화
